@@ -115,7 +115,7 @@ private:
     }
 
 public:
-    void Write(string message) {
+    void Write(const string& message) {
         if (pipe != INVALID_HANDLE_VALUE) {
             DWORD bytesWritten = 0;
             WriteFile(pipe, message.c_str(), (DWORD)message.length(), &bytesWritten, NULL);
