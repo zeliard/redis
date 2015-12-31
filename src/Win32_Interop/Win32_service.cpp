@@ -345,7 +345,7 @@ VOID ServiceInstall(int argc, char ** argv) {
         SetAccessACLOnFolder(userName, folder);
         aceMessage << "\"" << folder.c_str() << "\" ";
     }
-    ServicePipeWriter::getInstance().Write(aceMessage.str().c_str());
+    ServicePipeWriter::getInstance().Write(aceMessage.str());
 
     ServicePipeWriter::getInstance().Write("Redis successfully installed as a service.");
 }
